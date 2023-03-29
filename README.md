@@ -1,6 +1,8 @@
 # Cafe Natura Website
 A front-end website for a fictional coffeeshop called Cafe Natura, Code by Joanna Douba
 
+**Full Creative Process available at: https://www.behance.net/gallery/80174791/Cafe-Natura-Web-Design-Dev**
+
 ## Resources Used:
 - FontAwesome: http://fontawesome.io/
 - Bootstrap: http://getbootstrap.com/
