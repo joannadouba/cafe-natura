@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ANIMATE ON SCROLL -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- SHOP CSS -->
+    <link rel="stylesheet" type="text/css" href="css/shop/component.css">
+    <link rel="stylesheet" type="text/css" href="css/shop/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/shop/flickity.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,700|Pacifico" rel="stylesheet">
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-custom.js"></script>
+    <!-- OWN STYLES -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Cafe Natura</title>
+</head>
+<body class="shop">
+    <header class="position-relative z-1">
+        <nav class="navbar navbar-expand-md bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand d-md-none" href="index.html">
+                <img src="img/cafe-natura-logo-nobg.png" style="max-width: 7rem;" alt="Cafe Natura">
+              </a>
+              <a class="navbar-brand d-none d-md-block" href="index.html">
+                <img src="img/cafe-natura-logo.png" style="max-width: 7rem;" alt="Cafe Natura">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-0 pb-0">
+                  <li class="nav-item border-top border-bottom">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item border-bottom">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                  </li>
+                  <li class="nav-item border-bottom">
+                    <a class="nav-link" href="shop.html">Shop</a>
+                  </li>
+                  <li class="nav-item border-bottom">
+                    <a class="nav-link" href="about-us.html">About Us</a>
+                  </li>
+                  <li class="nav-item border-bottom">
+                    <a class="nav-link" href="contact-us.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main class="container-fluid px-0">
+        <div id="carouselExampleCaptions" class="carousel slide position-relative" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/carousel/drink-1839134-_1_.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                  <h5 class="display-3 mb-md-5">Connect with nature in the heart of Ottawa</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/carousel/coffee-1903988_1920-darkened.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                  <h5 class="display-3 mb-md-5">Connect with nature in the heart of Ottawa</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/carousel/restaurant-489845_1920-darkened.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="display-3 mb-md-5">Connect with nature in the heart of Ottawa</h5>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <section class="mb-5 p-4 p-md-5 bg-white shadow position-relative container">
+            <!-- Bottom bar with filter and cart info -->
+							<div class="bar">
+								<div class="filter">
+									<span class="filter__label">Filter: </span>
+									<button class="action filter__item filter__item--selected" data-filter="*">All</button>
+									<button class="action filter__item" data-filter=".coffee-accessories"><i class="icon icon--jacket"></i><span class="action__text">Coffee Accessories</span></button>
+									<button class="action filter__item" data-filter=".blends-dark"><i class="icon icon--shirt"></i><span class="action__text">Blends: Dark Roast</span></button>
+									<button class="action filter__item" data-filter=".blends-medium"><i class="icon icon--dress"></i><span class="action__text">Blends: Medium Roast</span></button>
+									<button class="action filter__item" data-filter=".blends-light"><i class="icon icon--blends-light"></i><span class="action__text">Blends: Light Roast</span></button>
+								</div>
+								<button class="cart">
+									<i class="cart__icon fa fa-shopping-cart"></i>
+									<span class="text-hidden">Shopping cart</span>
+									<span class="cart__count">0</span>
+								</button>
+							</div>
+							<!-- Main view -->
+							<div class="view">
+								<!-- Grid -->
+								<section class="grid grid--loading">
+									<!-- Loader -->
+									<img class="grid__loader" src="img/shop/grid.svg" width="60" alt="Loader image" />
+									<!-- Grid sizer for a fluid Isotope (Masonry) layout -->
+									<div class="grid__sizer"></div>
+									<!-- Grid items -->
+									<div class="grid__item blends-dark">
+										<div class="slider">
+											<div class="slider__item">
+												<img src="img/shop/coffee-blend_500-qahwa.jpg" alt="Dummy" />
+											</div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Qahwa Ghameqa</h3>
+											<span class="meta__brand">Dark Roast</span>
+											<span class="meta__price">$20</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+								
+									<div class="grid__item grid__item--size-a blends-dark">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-blend_500-scuro.jpg" alt="Dummy" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Cafe Scuro</h3>
+											<span class="meta__brand">Dark Roast</span>
+											<span class="meta__price">$16</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									<div class="grid__item blends-light">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-blend_500-khafifa.jpg" alt="Qahwa Khafifa" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Qahwa Khafifa</h3>
+											<span class="meta__brand">Light Blend</span>
+											<span class="meta__price">$19</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									<div class="grid__item grid__item--size-a coffee-accessories">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-accessories/jug-801860_500.jpg" alt="Coffee Jug" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Coffee Jug</h3>
+											<!-- <span class="meta__brand">Coffee Jug Inc.</span> -->
+											<span class="meta__price">$39</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									
+									<div class="grid__item blends-dark">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-blend_500-noire.jpg" alt="Dummy" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Cafe Noire</h3>
+											<span class="meta__brand">Dark Roast</span>
+											<span class="meta__price">$17</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									
+									
+									<div class="grid__item blends-dark">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-blend_500-oscuro.jpg" alt="Coffee Blend: Dark Roast" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Cafe Oscuro</h3>
+											<span class="meta__brand">Dark Roast</span>
+											<span class="meta__price">$22</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									<div class="grid__item blends-light">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-blend_500-leger.jpg" alt="Cafe Leger" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Café Léger</h3>
+											<span class="meta__brand">Light Blend</span>
+											<span class="meta__price">$20</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									<div class="grid__item coffee-accessories">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-accessories/kettle-2220369_500.jpg" alt="French Press" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">French Press</h3>
+											<!-- <span class="meta__brand">French Press Inc.</span> -->
+											<span class="meta__price">$29</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									
+									<div class="grid__item grid__item--size-a blends-medium">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-blend_500-medio.jpg" alt="Cafe Medio Blend" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Café Medio</h3>
+											<span class="meta__brand">Medium Roast</span>
+											<span class="meta__price">$18</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+
+									<div class="grid__item coffee-accessories">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-accessories/coffee-285109_500.jpg" alt="Coffee Grinder" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Coffee Grinder</h3>
+											<!-- <span class="meta__brand">Moka Pot Inc.</span> -->
+											<span class="meta__price">$59</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+
+									<div class="grid__item blends-light">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-blend_500-leggero.jpg" alt="Dummy" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Caffè Leggero</h3>
+											<span class="meta__brand">Light Roast</span>
+											<span class="meta__price">$18</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									<div class="grid__item coffee-accessories">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-accessories/mocha-2111932_500.jpg" alt="Turkish Coffee Set" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Turkish Coffee Set</h3>
+											<!-- <span class="meta__brand">Turkish Coffee Inc.</span> -->
+											<span class="meta__price">$99</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									
+									<div class="grid__item blends-medium">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-blend_500-media.jpg" alt="Caffe Media" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Caffè Media</h3>
+											<span class="meta__brand">Medium Roast</span>
+											<span class="meta__price">$18</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									
+									<div class="grid__item grid__item--size-a blends-light">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-blend_500-ligero.jpg" alt="Café Ligero" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Café Ligero</h3>
+											<span class="meta__brand">Light Blend</span>
+											<span class="meta__price">$17</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									<div class="grid__item coffee-accessories">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-accessories/books-2164387_500.jpg" alt="Cafe Natura Mug" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Cafe Natura Mug</h3>
+											<!-- <span class="meta__brand">Cafe Natura</span> -->
+											<span class="meta__price">$10</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									
+									<div class="grid__item blends-medium">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-blend_500-moyen.jpg" alt="Cafe Moyen" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Café Moyen</h3>
+											<span class="meta__brand">Medium Roast</span>
+											<span class="meta__price">$16</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									
+									<div class="grid__item coffee-accessories">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-accessories/coffee-791171_500.jpg" alt="Moka Pot" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Moka Pot</h3>
+											<!-- <span class="meta__brand">Moka Pot Inc.</span> -->
+											<span class="meta__price">$49</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									
+									<div class="grid__item grid__item--size-a blends-medium">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-blend_500-wasat.jpg" alt="Qahwa Wasat" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Qahwa Wasat</h3>
+											<span class="meta__brand">Medium Blend</span>
+											<span class="meta__price">$19</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+									
+									<div class="grid__item coffee-accessories">
+										<div class="slider">
+											<div class="slider__item"><img src="img/shop/coffee-accessories/coffee-1839734_500.jpg" alt="Electric Coffee Grinder" /></div>
+										</div>
+										<div class="meta">
+											<h3 class="meta__title">Electric Coffee Grinder</h3>
+											<!-- <span class="meta__brand">Electric Coffee Grinder Inc.</span> -->
+											<span class="meta__price">$299</span>
+										</div>
+										<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+									</div>
+								</section>
+								<!-- /grid-->
+							</div> <!-- /.view -->
+        </section>
+    </main>
+    <footer class="bg-primary p-3 p-md-5 position-relative">
+      <div class="d-flex justify-content-between">
+          <div class="social d-flex mb-2">
+              <a href="https://facebook.com"><i class="fa-brands fa-square-facebook fa-3x pe-3"></i></a>
+              <a href="https://twitter.com"><i class="fa-brands fa-square-twitter fa-3x pe-3"></i></a>
+              <a href="https://instagram.com"><i class="fa-brands fa-instagram fa-3x"></i></a>
+          </div>
+  
+          <ul class="list-unstyled d-md-flex">
+            <li class="px-4"><a href="index.html" class="text-decoration-none text-uppercase">Home</a></li>
+            <li class="px-4"><a href="menu.html" class="text-decoration-none text-uppercase">Menu</a></li>
+            <li class="px-4"><a href="shop.html" class="text-decoration-none text-uppercase" >Shop</a></li>
+            <li class="px-4"><a href="contact-us.html" class="text-decoration-none text-uppercase" >Contact Us</a></li>
+            <li class="px-4"><a href="about-us.html"class="text-decoration-none text-uppercase">About Us</a></li>
+          </ul>
+      </div>
+
+      <span class="text-light">All Rights Reserved. &copy; 2017 Cafe Natura Ltd.</span>
+  </footer>
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <!-- ANIMATE ON SCROLL JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/edfb327ecf.js" crossorigin="anonymous"></script>
+    <!-- JQUERY -->
+    <script
+        src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+        integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw="
+        crossorigin="anonymous"></script>
+		
+	
+    
+	<!-- ISOTOPE -->
+    <!-- <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> -->
+    
+    <!-- /view -->
+		<script src="js/shop/isotope.pkgd.min.js"></script>
+		<script src="js/shop/flickity.pkgd.min.js"></script>
+		<script src="js/shop/main.js"></script>
+
+    <!-- Initialize Animate on Scroll -->
+    <script>
+        AOS.init();
+    </script>
+    <!-- Isotope Script -->
+    <script>
+        // init Isotope
+        var $grid = $('.grid').isotope({
+			masonry: {
+						columnWidth: 200
+					},
+        });
+        // filter items on button click
+        $('.filter-button-group').on( 'click', 'button', function() {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+        });
+    </script>
+
+	<script>
+		$html = document.querySelector('html');
+
+		window.addEventListener('load', (e) => {
+			$html.classList.remove('placeholder');	
+		})
+	</script>
+</body>
+</html>
